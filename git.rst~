@@ -1,0 +1,132 @@
+=================
+ Version Control
+=================
+
+.. contents::
+   :local:
+
+Commands
+========
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Code
+     - Meaning
+   * - ::
+
+           $ git clone https://user@bitbucket.org/username/file.git
+
+     - Clone the repository to the required directory. This will create a directory called "file" with the repository inside it
+   * - ::
+
+           $ git fetch origin
+
+     - Fetch any changes from origin
+   * - ::
+
+           $ git merge origin/master
+
+     - Merge the origin with the master branch
+   * - ::
+
+           $ git pull origin master
+
+     - Fetch any changed from origin **AND** merge the origin with the master branch
+   * - ::
+
+           $ git pull
+
+     - Fetch any changed from origin **AND** merge the origin with the master branch (origin and master are defaults)
+
+
+How to put a directory under version control?
+=============================================
+
+* Firstly create a repository in GitHub
+* cd into the directory you want under version control
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Code
+     - Meaning
+   * - ::
+
+           $ git init
+
+     - Initilises git
+
+   * - ::
+
+           $ git add -A
+
+     - Create a dummy file. Add all changes
+   * - ::
+
+           $ git commit -m "The new changes are identified by this sentence"
+
+     - Commit the changes
+   * - ::
+
+           $ git remote add origin https://github.com/en9apr/sphinx.git
+
+     - Adds the origin to a github respository
+
+How to change the origin?
+=========================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Code
+     - Meaning
+   * - ::
+
+           $ git remote rm origin
+
+     - Removes the current origin
+   * - ::
+
+           $ git remote set-url origin https://github.com/en9apr/sphinx.git
+
+     - Changes the origin to github respository
+   * - ::
+
+           $ git add -A
+
+     - Add all changes
+   * - ::
+
+           $ git push -u origin master
+
+     - Pushes the changes to the origin (username and password required)
+
+
+How to commit changes to git and push to respository?
+=====================================================
+
+.. list-table::
+   :header-rows: 1
+   :widths: 40 60
+
+   * - Code
+     - Meaning
+   * - ::
+
+           $ git add -A
+
+     - Add all changes
+   * - ::
+
+           $ git commit -m "The new changes are identified by this sentence"
+
+     - Commit the changes
+   * - ::
+
+           $ git push
+
+     - Push the changes to the origin (will have to enter username and password for the origin)
